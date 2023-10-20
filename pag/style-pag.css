@@ -29,4 +29,5 @@ p {
     text-align: center; 
     font-variant: small-caps; /* mudar forma da fonte */
     text-shadow: 5px 5px 2px #558ABB; /* offset-x | offset-y | blur-radius | color */
+    letter-spacing: 5px; /* espaços entre letras */
 }
