@@ -3,17 +3,30 @@ body {
 }
 
 section {
-    padding: 50px;
-    margin: 20px auto;
-    width: 80%;
+    padding: 80px;
+    margin: 0px auto;
+    width: 70%;
     height: 500px;
 
+    border: 1px solid red;
+
     background-image: url("../assets/photo.JPG");
-    background-size: cover;;
+    background-size: cover;
 }
 
 img {
     border-radius: 20px;
-    width: 100%;
+    width: 80%;
     margin: 5px 0px;
+    padding: 10%;
+}
+
+p {
+    font-family: sans-serif;
+    font-weight: 200; /* negrito */
+    font-size: large;
+    color: bisque;
+    text-align: center; 
+    font-variant: small-caps; /* mudar forma da fonte */
+    text-shadow: 5px 5px 2px #558ABB; /* offset-x | offset-y | blur-radius | color */
 }
