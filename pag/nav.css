@@ -1,0 +1,77 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    background-color: #222222;
+}
+
+ul {
+    margin-top: 1%;
+    display: flex;
+    /* border: 3px solid red; */
+    /* background-color: azure; */
+    height: 30px;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 2px solid white; */
+    position: sticky;
+    z-index: 1;
+}
+
+ul li {
+    text-shadow: #0f0f0f 2px 2px;
+    list-style-type: none;
+}
+
+a {
+    padding: 6px 25px;
+    color: violet;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    border: 2px solid white;
+    background-color: blueviolet;
+    animation-delay: 3ms ease-in-out;
+}
+
+form textarea {
+    /* text-align: center; */
+    /* border: 2px solid red; */
+    /* position: absolute; */
+    /* margin: 0 auto; */
+    width: 80%;
+}
+ form {
+    /* border: 3px solid maroon; */
+    text-align: center;
+    /* margin: 0 auto; */
+ }
+
+[type=button] {
+    /* border: 2px solid red; */
+    position: relative;
+    padding: 10px 15%;
+    margin: 5px auto;
+    /* margin-top: 50px; */
+    text-align: center;
+    /* height: 100px; */
+    background-color:blanchedalmond
+}
+
+[type=button]:hover {
+   background-color: chocolate;
+}
+
+[type=textarea] {
+    margin-top: 3vw; /* vw segue os padroes da tela do usuario */
+    height: 15vw;
+    /* background-color: aqua; */
+}
+
+h1 {
+    border: 3px solid white;
+    display: inline-block;
+    color: aliceblue;
+}

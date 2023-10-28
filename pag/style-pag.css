@@ -6,7 +6,7 @@ section {
     padding: 5px;
     margin: 0px auto;
     width: 40%;
-    height: 500px;
+    /* height: 500px; */
 
     /* border: 1px solid red; */
 
@@ -30,6 +30,5 @@ p {
     text-align: center; 
     font-variant: small-caps; /* mudar forma da fonte */
     text-shadow: 5px 5px 2px #558ABB; /* offset-x | offset-y | blur-radius | color */
-    text-shadow: 5px 5px 2px red; /* offset-x | offset-y | blur-radius | color */
     letter-spacing: 5px; /* espaços entre letras */
 }

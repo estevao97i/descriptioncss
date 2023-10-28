@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh; /* pega todo o tipo de tela */
+
+    background-color: #1a1a1a;
+/* 
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.box {
+    border: 5px solid white;
+    width: 500px;
+    height: 500px;
+}
+
+.item1 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    /* position: static;  já é padrão dentro do css*/
+
+    /* posição relativa a ele mesmo | usa-se muito para animação da posição */
+    /* position: relative;  
+    top: 250px; 
+    left: 10%; */
+
+    /* posição absolute é referenciado ao elemento pai (por padrão o body - relative) */
+    /* position: absolute;
+    top: 0; */
+
+    /* position fixed - referencia é a própria tela */
+    /* position: fixed;
+    top: 0; */
+
+    /* position sticky: fica por cima da galera na tela - usar com z-index: 1 */
+    /* position: sticky;
+    top: 0; */
+}
+
+.item2 {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    /* position: static;  posição relativa a ele mesmo */
+    /* position: relative;  posição relativa a ele mesmo */
+    /* display: none; */
+}
+
+nav {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+ul {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
