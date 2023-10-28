@@ -128,6 +128,12 @@ h1 {
     font-size: 3vh;
 }
 
-@media screen and {
-    
+@media screen and (max-width: 960px) {
+    .container {
+        flex-direction: column;
+    }
+
+    [type=button] {
+        background-color: darkgreen;
+    }
 }
