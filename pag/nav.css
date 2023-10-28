@@ -65,8 +65,8 @@ form textarea {
 }
 
 [type=textarea] {
-    margin-top: 3vw; /* vw segue os padroes da tela do usuario - 100vw é a tela toda!! */
-    height: 15vw;
+    margin-top: 3vw; /* vw segue os padroes da tela do usuario */
+    height: 15vh; /* 100vh é a tela toda!! */
     /* background-color: aqua; */
 }
 
