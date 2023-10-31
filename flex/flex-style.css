@@ -11,9 +11,9 @@ body {
 
 .container {
     max-width: 500px;
-    height: 600px;
+    height: 500px;
 
-    margin: 0 auto;
+    margin: 10px auto;
 
     border: 5px solid white;
 
@@ -21,7 +21,7 @@ body {
     flex-wrap: wrap;
     /* flex-wrap: wrap-reverse; */
 
-    /* justify-content: stretch; */
+    justify-content: flex-start;
     /* align-items: center; */
 }
 
@@ -32,12 +32,13 @@ body {
 } */
 
 .item {
+    margin: 5px;
     /* max-height: 150px; */
     /* min-height: 150px; */
-    padding: 40px;
-    margin: 5px;
+    padding: 20px;
     flex-grow: 1;
     background-color: #ccc;
+    flex-basis: 100px;
 }
 
 .item:nth-child(2) {
