@@ -129,3 +129,13 @@ h4 {
 .description > p {
     margin-left: 10px;
 }
+
+@media (max-width: 640px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .video-thumb {
+        width: 30%;
+    }
+}
