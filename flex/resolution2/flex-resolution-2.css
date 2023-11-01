@@ -195,3 +195,15 @@ h6 {
     height: 165px;
     background-color: #777;
 }
+
+@media (max-width: 640px) {
+    .up-items {
+        flex-direction: column;
+        margin-top: 320px;
+    }
+    
+    .down-items {
+        margin-top: 320px;
+        flex-direction: column;
+    }
+}
