@@ -39,6 +39,10 @@ header {
     border-radius: 10px;
 }
 
+.logo:hover {
+    opacity: 0.8;
+}
+
 
 .items-link {
     display: flex;
@@ -47,6 +51,16 @@ header {
 
 .links {
     padding: 15px;
+
+    /* transition: 0.8s ease; */
+}
+
+.links:hover {
+    opacity: 0.8;
+}
+
+.item-link {
+    padding: 15px 5px;
 }
 
 .buttons-right {
@@ -56,6 +70,12 @@ header {
     width: 80px;
     background-color: aquamarine;
     border-radius: 10px;
+
+    /* transition: 1.05s ease; */
+}
+
+.buttons-right:hover {
+    opacity: 0.8;
 }
 
 .item-link {
@@ -74,6 +94,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-bottom: 30px;
 }
 
 .item-up {
@@ -100,4 +121,77 @@ h5 {
     line-height: 130%;
     margin: 4px;
     color: #cfcfcf;
+}
+
+.down-items {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    gap: 15px;
+
+    /* border: 2px solid orange; */
+}
+
+.down-left {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.item-left-1 {
+    height: 350px;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+.down-center {
+    width: 32.5%;
+    height: 350px;
+}
+
+.item-center-1 {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.thumb-center-1 {
+    margin-right: 10px;
+    max-width: 120px;
+    min-width: 110px;
+    border-radius: 10px;
+    height: 100px;
+    background-color: #777;
+}
+
+.text-title {
+    display: flex;
+    flex-direction: column;
+}
+
+h4 {
+    color: #cfcfcf;
+    line-height: 130%;
+}
+
+h6 {
+    line-height: 160%;
+    color: #777;
+}
+
+.down-right {
+    width: 32.5%;
+}
+
+.right-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.thumb-right {
+    border-radius: 10px;
+    min-width: 120px;
+    max-width: 150px;
+    height: 165px;
+    background-color: #777;
 }
