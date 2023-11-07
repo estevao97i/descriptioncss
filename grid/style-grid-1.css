@@ -42,3 +42,11 @@ body {
 .gridItem:nth-child(even) {
     background-color: rgb(53, 53, 53);
 }
+
+.gridItem:nth-child(3) {
+    background: rgb(91, 110, 110);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
