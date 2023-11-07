@@ -100,12 +100,17 @@ body {
 }
 
 .gridItem2:nth-child(3) {
-    grid-row: 2 / -1;
+    grid-row: 2 / 6;
     grid-column: 5 / 7;  
 }
 
 .gridItem2:nth-child(4) {
-    grid-row: 3 / -1;
+    grid-row: 3 / 6;
     grid-column: 1 / 5;
+}
+
+.gridItem2:nth-child(5) {
+    grid-row: 6 / 7;
+    grid-column: 1 / -1;
 }
 
