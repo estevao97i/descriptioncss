@@ -1,42 +1,76 @@
 @import '_colors';
 @import '_shadow';
 
+$container-xl: 1440px;
+$container-l: 1140px;
+$container-m: 960px;
+$container-s: 540px;
+
+@mixin responsive($device) {
+    @if $device == xl {
+        @media screen and (max-width: $container-xl) {
+            @content;
+        }
+    } @else if $device == l {
+        @media screen and (max-width: $container-xl) and (min-width: $container-l) {
+            @content;
+        }
+    } @else if $device == m {
+        @media screen and (max-width: $container-l) and (min-width: $container-m) {
+            @content;
+        }
+    } @else if $device == s {
+        @media screen and (max-width: $container-s) {
+            @content;
+        }
+    }
+}
+
 $layout: light;
-$bg-color: #101010;
-$text-color: #efefef;
+// $bg-color: #101010;
+// $text-color: #efefef;
 
-@if $layout == light {
-    $bg-color: #efefef;
-    $text-color: #101010;
-} @else if $layout == dark {
-    $bg-color: #101010;
-    $text-color: #efefef;
-}
+// @if $layout == light {
+//     $bg-color: #efefef;
+//     $text-color: #101010;
+// } @else if $layout == dark {
+//     $bg-color: #101010;
+//     $text-color: #efefef;
+// }
 
 
-@mixin title($tamanho: 48px, $cor: red) {
-    font-variant: small-caps;
-    color: $cor;
-    font-size: $tamanho;
+// @mixin title($tamanho: 48px, $cor: red) {
+//     font-variant: small-caps;
+//     color: $cor;
+//     font-size: $tamanho;
     
-    @media (max-width: 960px){
-        @content
-    }
-}
+//     @media (max-width: 960px){
+//         @content
+//     }
+// }
 
-@mixin responsive() {
-    font-variant: small-caps;
+// @mixin responsive() {
+//     margin: 0 auto;
+//     font-variant: small-caps;
 
-    @media (max-width: 960px) {
-        @content
-    }
-}
+//     @media (max-width: 960px) {
+//         @content
+//     }
+// }
 
-@for $i from 1 through 3 {
-    div-#{$i} {
-        background-color: antiquewhite;
-    }
-}
+// @for $i from 1 through 3 {
+//     div-#{$i} {
+//         background-color: antiquewhite;
+//     }
+// }
+
+// @function grid($col, $total: 12) {
+//     @return ($col / $total) * 100%
+// }
+
+// .div {
+//     width: grid(3);
+// }
 
 * {
     padding: 0;
@@ -51,7 +85,7 @@ body {
     width: 100%;
     height: 100vh;
     
-    background-color: $bg-color;
+    background-color: $layout;
 
     display: flex;
     justify-content: center;
@@ -61,21 +95,26 @@ body {
 }
 
 h1 {
-    color: $text-color;
+    color: black;
 
-    @include responsive() {
-        font-weight: 900;
-        font-size: 64px;
-        transition: 0.8s ease;
-    }
+    // @include responsive() {
+    //     font-weight: 900;
+    //     // font-size: 64px;
+    //     transition: 0.8s ease;
+    // }
 
-    @include title(48px, blue) {
-        text-decoration: overline;
-    };
+    // @include title(48px, blue) {
+    //     text-decoration: overline;
+    // };
 
     span {
         color: $grey;
     }
+}
+
+.container {
+
+
 }
 
 // a {
