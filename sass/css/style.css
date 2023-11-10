@@ -18,12 +18,20 @@ body {
 h1 {
   color: #fff;
   font-variant: small-caps;
+  font-variant: small-caps;
+  color: blue;
+  font-size: 48px;
 }
 @media (max-width: 960px) {
   h1 {
     font-weight: 900;
-    font-size: large;
+    font-size: 64px;
     transition: 0.8s ease;
+  }
+}
+@media (max-width: 960px) {
+  h1 {
+    text-decoration: overline;
   }
 }
 h1 span {

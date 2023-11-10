@@ -1,7 +1,18 @@
 @import '_colors';
 @import '_shadow';
 
-@mixin responsive {
+
+@mixin title($tamanho: 48px, $cor: red) {
+    font-variant: small-caps;
+    color: $cor;
+    font-size: $tamanho;
+    
+    @media (max-width: 960px){
+        @content
+    }
+}
+
+@mixin responsive() {
     font-variant: small-caps;
 
     @media (max-width: 960px) {
@@ -36,9 +47,13 @@ h1 {
 
     @include responsive() {
         font-weight: 900;
-        font-size: large;
+        font-size: 64px;
         transition: 0.8s ease;
     }
+
+    @include title(48px, blue) {
+        text-decoration: overline;
+    };
 
     span {
         color: $grey;
@@ -52,6 +67,7 @@ a {
     text-decoration: none;
     color: $branco;
     transition: 0.6s ease;
+    
 
     &:hover {
         box-shadow: $shadow;
