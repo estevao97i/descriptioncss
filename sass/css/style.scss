@@ -1,5 +1,5 @@
-@import '_colors';
-@import '_shadow';
+// @import '_colors';
+// @import '_shadow';
 
 $container-xl: 1440px;
 $container-l: 1140px;
@@ -26,7 +26,7 @@ $container-s: 540px;
     }
 }
 
-$layout: light;
+$layout: black;
 // $bg-color: #101010;
 // $text-color: #efefef;
 
@@ -82,20 +82,20 @@ $layout: light;
 
 body {
 
-    width: 100%;
-    height: 100vh;
+    // width: 100%;
+    // height: 100vh;
     
     background-color: $layout;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 
-    flex-direction: column;
+    // flex-direction: column;
 }
 
 h1 {
-    color: black;
+    // color: black;
 
     // @include responsive() {
     //     font-weight: 900;
@@ -107,14 +107,41 @@ h1 {
     //     text-decoration: overline;
     // };
 
-    span {
-        color: $grey;
+    // span {
+    //     color: $grey;
+    // }
+}
+
+$container: 1400px;
+$gutter: 24px;
+
+.container {
+    max-width: $container;
+    margin: 48px auto;
+    padding: 36px 16px;
+
+    border: 1px solid red;
+
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
     }
 }
 
-.container {
+@function grid($col, $total: 12) {
+    @return ($col / $total) * 100%;
+}
 
-
+@for $i from 1 through 12 {
+    .grid-#{$i} {
+        width: calc(#{grid($i)} - #{$gutter});
+        margin: 0 calc($gutter / 2);
+        border: 2px solid red;
+        height: 72px;
+        float: left;
+        background-color: rgb(54, 54, 54);
+    }
 }
 
 // a {
