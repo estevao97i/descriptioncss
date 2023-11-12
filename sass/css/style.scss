@@ -8,7 +8,7 @@ $container-s: 540px;
 
 @mixin responsive($device) {
     @if $device == xl {
-        @media screen and (max-width: $container-xl) {
+        @media screen and (min-width: $container-xl) {
             @content;
         }
     } @else if $device == l {
@@ -117,10 +117,10 @@ $gutter: 24px;
 
 .container {
     max-width: $container;
-    margin: 48px auto;
-    padding: 36px 16px;
+    margin: 0 auto;
+    // padding: 36px 16px;
 
-    border: 1px solid red;
+    border: 1px solid #555;
 
     &::after {
         content: '';
@@ -136,11 +136,17 @@ $gutter: 24px;
 @for $i from 1 through 12 {
     .grid-#{$i} {
         width: calc(#{grid($i)} - #{$gutter});
-        margin: 0 calc($gutter / 2);
-        border: 2px solid red;
+        margin: calc($gutter / 2);
+        border: 2px solid #333;
         height: 72px;
         float: left;
         background-color: rgb(54, 54, 54);
+
+        @include responsive(s) {
+            width: calc(100% - #{$gutter});
+            margin: $gutter / 2;
+            float: none;
+        }
     }
 }
 
