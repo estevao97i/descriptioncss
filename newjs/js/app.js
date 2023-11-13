@@ -86,9 +86,41 @@ console.log(window.innerHeight)
 console.log(window.scrollY)
 console.log(window.scrollX)
 
-// const h1 = document.querySelector('h1');
-// console.log(h1)
+// mexer no @media do css pelo javascript
+const media = window.matchMedia('(max-width: 540px)');
+console.log(media)
+
+if (media.matches) {
+    console.log('tela mobile')
+} else {
+    console.log('tela desktop')
+}
+
+
+// selecionar a tag pelo H1
+const h1 = document.querySelector('h1');
+console.log(h1)
 
 // ver o que tem dentro do elemento selecionado
-// console.log(h1.innerText)
-// console.log(h1.classList.value.split(' '))
+console.log(h1.innerText)
+console.log(h1.classList.value.split(' '))
+
+// ver o evento de clique
+function callBack(event) {
+     // target vê os componentes individuais
+     console.log(event.target)
+     // currentTarget pega todos os itens
+     console.log(event.currentTarget)
+     // type pega o clique
+     console.log(event.type)
+     // path pega tudo, tudo mesmo!
+     console.log(event.path)
+
+     // logica pra trocar a cor do elemento
+    if (event.target.style.color === 'blue') {
+        return event.target.style.color = 'white'
+    } 
+    event.target.style.color = 'blue'
+}
+
+container.addEventListener('mousemove', callBack)
