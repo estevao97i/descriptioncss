@@ -118,6 +118,7 @@ function callBack(event) {
 
   // adiciona a classe no elemento - toggle ativa e desativa sozinho
   container.classList.toggle("red");
+  link.classList.toggle('black-letter')
 }
 
 function callback1(event) {

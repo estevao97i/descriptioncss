@@ -38,5 +38,10 @@ body {
 
 .red {
   transition: 1s ease-in-out;
-  background-color: red;
+}
+
+.black-letter {
+  transition: 1s ease;
+  letter-spacing: 3px;
+  background-color: rgba(85, 85, 85, 0.6666666667);
 }/*# sourceMappingURL=style.css.map */
