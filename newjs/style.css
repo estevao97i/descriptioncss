@@ -34,4 +34,9 @@ body {
   height: 200px;
   background-color: #555;
   border-radius: 12px;
+}
+
+.red {
+  transition: 1s ease-in-out;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
