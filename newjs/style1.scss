@@ -52,14 +52,12 @@ button {
     margin-top: 16px;
     margin-bottom: 16px;
     opacity: 0.6;
+    transition: 0.4s ease;
 
     &:hover {
         opacity: 1;
     }
-    
-    &:active {
-        opacity: 1;
-    }
+
 }
 
 .accordion-content {
