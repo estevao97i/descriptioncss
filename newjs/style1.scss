@@ -28,7 +28,16 @@ body {
 }
 
 .border {
-    border: 1px solid red
+    // border: 1px solid red
+}
+
+button {
+    border: 0;
+    box-shadow: 1px 1px 1px orange;
+}
+
+button:hover {
+    box-shadow: 1px 1px 1px black;
 }
 
 .accordion-button {
@@ -43,5 +52,15 @@ body {
 }
 
 .accordion-content {
-    
+    color: white;
+    overflow: hidden;
+
+    transition: .7s ease;
+    // height: 0px;
 }
+
+// .active {
+//     color: white;
+//     overflow: hidden;
+//     height: auto;
+// }
