@@ -33,34 +33,105 @@ body {
 
 button {
     border: 0;
-    box-shadow: 1px 1px 1px orange;
+    box-shadow: 1px 1px 6px 1px orange;
 }
 
-button:hover {
-    box-shadow: 1px 1px 1px black;
-}
+// button:hover {
+//     box-shadow: 1px 1px 1px black;
+// }
 
 .accordion-button {
+    margin: 0 auto;
     display: block;
-    width: 100%;
+    width: 80%;
 
     cursor: pointer;
     background-color: transparent;
 
     padding: 8px 16px;
     margin-top: 16px;
+    margin-bottom: 16px;
+    opacity: 0.6;
+
+    &:hover {
+        opacity: 1;
+    }
+    
+    &:active {
+        opacity: 1;
+    }
 }
 
 .accordion-content {
+    margin-top: 16px;
+    // margin-top: 10px;
     color: white;
     overflow: hidden;
+    text-align: center;
 
-    transition: .7s ease;
-    // height: 0px;
+    transition: .5s ease;
+    
+    button {
+        box-shadow: 1px 1px 6px 1px rgb(189, 255, 158);
+        margin: 16px;
+        padding: 16px 32px;
+        background-color: #333;
+        color: white;
+        transition: 0.2s;
+        opacity: 0.6;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+            padding: 16px 36px;
+        }
+    }
+
+    .modal {
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition: 0.4s ease;
+    }
+
+    .modal-active {
+        opacity: 0.99;
+        // filter: blur(5px);
+        pointer-events: all;
+    }
+    
+    .modal-content {
+        border-radius: 8px;
+        position: relative;
+        max-width: 400px;
+
+        background-color: #222;
+        padding: 40px;
+    }
+
+    .close {
+        position: absolute;
+        left: 92%;
+        top: 0;
+        font-size: 36px;
+        cursor: pointer;
+
+        &:hover {
+            color: #7c4343;
+        }
+    }
 }
-
-// .active {
-//     color: white;
-//     overflow: hidden;
-//     height: auto;
-// }
