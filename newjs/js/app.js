@@ -28,8 +28,16 @@ const produtos = [
     preco: 200,
   },
   {
-    nome: "va",
+    nome: "tatata",
     preco: 300,
+  },
+  {
+    nome: "tatata",
+    preco: 200,
+  },
+  {
+    nome: "tatata",
+    preco: 100,
   },
 ];
 
@@ -38,6 +46,19 @@ const produtosSum = produtos.reduce((sum, curr) => {
   return sum + curr.preco;
 }, initialValue);
 
+const newProducts = produtos.reduce((newItem, currItem) => {
+  if (!newItem[currItem.nome]) {
+    newItem[currItem.nome] = [];
+    newItem[currItem.nome].push(currItem.preco);
+  } else {
+    newItem[currItem.nome].push(currItem.preco);
+  }
+  // newItem[currItem.nome] = currItem.preco || [] 
+
+  return newItem
+}, {})
+
+console.log(newProducts);
 console.log(produtos);
 console.log(produtosSum);
 
