@@ -39,13 +39,28 @@ const buttons = document.querySelectorAll('.accordion-button').forEach( button =
     })
 })
 
-let xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'https://api.github.com/users/nyousefali')
-xhr.send(null)
-
-xhr.onreadystatechange = () => {
-    if (xhr.readyState === 4) {
-        console.log(JSON.parse(xhr.responseText))
-    }
+let myPromise = () => {
+    return new Promise((resolve, reject) => {
+        let xhr = new XMLHttpRequest();
+        
+        xhr.open('GET', 'https://api.github.com/users/nyousefali')
+        xhr.send(null)
+        
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    resolve(JSON.parse(xhr.responseText))
+                } else {
+                    reject('Error')
+                }
+            }
+        }
+        
+    })
 }
+
+let result = myPromise()
+result.then((data) => {
+    console.log(data)
+}).catch(err => alert(err))
