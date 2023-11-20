@@ -37,6 +37,8 @@ body {
   margin-left: 24px;
   text-decoration: none;
   color: rgb(143, 63, 63);
+  cursor: pointer;
+  padding: 12px;
 }
 .container h6 {
   color: white;
