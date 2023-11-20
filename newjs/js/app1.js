@@ -1,3 +1,6 @@
+import math from "./math.js"
+import { makeUpperCase } from "./string.js"
+
 document.querySelectorAll('.accordion-content').forEach(elem => {
     elem.style.maxHeight = '0'
 
@@ -65,8 +68,27 @@ const buttons = document.querySelectorAll('.accordion-button').forEach( button =
 //     console.log(data)
 // }).catch(err => alert(err))
 
+let str = 'estevao'
+console.log(makeUpperCase(str))
+
+console.log(math.areaRectangle(4,8))
+
 axios.get('https://api.github.com/users/nyousefali')
 .then((response) => {
     console.log(response.data)
-}).catch(err => alert(err))
+}).catch(err => alert(err)) 
 
+document.documentElement.addEventListener('mousedown', MouseMove)
+
+function MouseMove(event) {
+    
+    const {clientX, clientY} = event;
+
+    console.log(clientX, clientY)
+}
+
+const cars = ['volkswagem', 'fiat', 'renault', 'minicopper']
+
+const [label1, label2, label3, label4] = cars
+
+console.log(label3)
