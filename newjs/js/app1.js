@@ -16,7 +16,9 @@ const buttons = document.querySelectorAll('.accordion-button').forEach( button =
         
         if (button.classList.contains('active')) {
             content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.opacity = '1';
         } else {
+            content.style.opacity = '0.6';
             content.style.maxHeight = '0'
         }
         
@@ -37,3 +39,13 @@ const buttons = document.querySelectorAll('.accordion-button').forEach( button =
     })
 })
 
+let xhr = new XMLHttpRequest();
+
+xhr.open('GET', 'https://api.github.com/users/nyousefali')
+xhr.send(null)
+
+xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+        console.log(JSON.parse(xhr.responseText))
+    }
+}

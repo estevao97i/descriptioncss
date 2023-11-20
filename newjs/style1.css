@@ -84,6 +84,7 @@ button {
   pointer-events: all;
 }
 .accordion-content .modal-content {
+  z-index: 2;
   border-radius: 8px;
   position: relative;
   max-width: 400px;
