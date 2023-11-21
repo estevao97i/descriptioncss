@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  background-color: #1a1a1a;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  border-radius: 16px;
+  width: 100px;
+  height: 100px;
+  background-color: #487440;
+}
+.box:hover {
+  animation: rotation 1s ease;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.border {
+  border: 1px solid red;
+}/*# sourceMappingURL=style.css.map */
