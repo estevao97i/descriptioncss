@@ -24,13 +24,14 @@ body {
     border-radius: 16px;
     width: 100px;
     height: 100px;
-    background-color: #487440;
+    background: linear-gradient(red, green, blue);
 
-    // transition: .5s ease;
+    transition: .5s ease;
     
     &:hover {
+        transform: rotate(90deg) translate(80px, 50px);
         // transform: rotate(180deg);
-        animation: rotation 1s ease;
+        // transform: translate(40px, 50px);
         
     }
 }
