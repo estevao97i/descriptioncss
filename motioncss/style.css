@@ -23,11 +23,13 @@ body {
   border-radius: 16px;
   width: 100px;
   height: 100px;
-  background: linear-gradient(red, green, blue);
+  background: linear-gradient(red, blue);
+  opacity: 0.3;
   transition: 0.5s ease;
 }
 .box:hover {
-  transform: rotate(90deg) translate(80px, 50px);
+  transform: rotate(30deg) translate(30px, -80px) scale(1.15) skew(-20deg);
+  opacity: 1;
 }
 
 @keyframes rotation {
