@@ -17,6 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  perspective: 500px;
 }
 
 .box {
@@ -24,14 +25,16 @@ body {
   width: 100px;
   height: 100px;
   background: linear-gradient(red, blue);
-  opacity: 0.3;
-  transition: 0.5s ease;
+  opacity: 0.6;
+  transform-origin: center center;
+  transition: 0.8s ease;
+  transition: all 1s ease;
 }
 .box:hover {
-  transform: rotate(30deg) translate(30px, -80px) scale(1.15) skew(-20deg);
-  opacity: 1;
+  transform: rotate(20deg) translate(30px, -80px) scale(1.15) skew(0deg);
 }
 
+@Keyframes center {}
 @keyframes rotation {
   from {
     transform: rotate(0deg);

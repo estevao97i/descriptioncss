@@ -12,12 +12,15 @@ body {
 }
 
 .container {
+    // position: relative;
     margin: 0 auto;
     width: 80%;
     height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    perspective: 500px;
 }
 
 .box {
@@ -25,18 +28,47 @@ body {
     width: 100px;
     height: 100px;
     background: linear-gradient(red, blue);
-    opacity: 0.3;
+    opacity: 0.6;
+    // transform: skew(-20deg);
 
-    transition: .5s ease;
+    transform-origin: center center;
+    transition: .8s ease;
+
+    transition: all 1s ease;
     
     &:hover {
-        transform: rotate(30deg) translate(30px, -80px) scale(1.15) skew(-20deg);
-        // transform: skew(-20deg);
+        // position: absolute;
+        transform: rotate(20deg) translate(30px, -80px) scale(1.15) skew(0deg);
+        // transform: skew(-50deg);
         // transform: scale(1.15);
         // transform: rotate(180deg);
-        // transform: translate(40px, 50px);
-        opacity: 1;
+        // transform: rotateX(180deg) ;
+        // transform: rotateY(180deg);
+        // transform: translate(-300px, 500%);
+        // top: 50%;
+        // opacity: 1;
     }
+}
+
+.centralizar {
+    // transform-origin: -300px 150px;
+    // transform: rotateX(20deg) translate(-300px, 500%);
+    // animation: center 0.8s infinite;
+}
+
+@Keyframes center{
+    // from {
+    //     // transform: rotateX(20deg) translate(-300px, 500%);
+    //     transform: skew(0deg) ;
+    //     // transform: translate(-300px, 500px);
+    // }
+    // // 10% {
+    // //     transform: translate(-300px, 500%);
+    // //     // transform: skew(100deg);
+    // // }
+    // to {
+    //     transform: skew(20deg);
+    // }
 }
 
 @keyframes rotation{
