@@ -1,9 +1,8 @@
 let box = document.querySelector('.box')
+let parent = document.querySelector('.parent')
 
-box.addEventListener('click', () => {
-    return box.classList.toggle('centralizar');
-});
-
-function center(event) {
+parent.addEventListener('click', () => {
     box.classList.toggle('centralizar');
-}
+    parent.classList.toggle('roll-parent');
+    return
+});
