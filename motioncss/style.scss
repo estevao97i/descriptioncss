@@ -28,17 +28,17 @@ body {
     width: 100px;
     height: 100px;
     background: linear-gradient(red, blue);
-    opacity: 0.6;
+    opacity: 0.9;
     // transform: skew(-20deg);
 
-    transform-origin: center center;
-    transition: .8s ease;
-
-    transition: all 1s ease;
+    // transition: .9s ease;
     
-    &:hover {
+    transform: rotate(0deg);
+    transition: all 0.8s ease;
+    
+    // &:hover {
+        // transform-origin: 0% 0%;
         // position: absolute;
-        transform: rotate(20deg) translate(30px, -80px) scale(1.15) skew(0deg);
         // transform: skew(-50deg);
         // transform: scale(1.15);
         // transform: rotate(180deg);
@@ -47,10 +47,12 @@ body {
         // transform: translate(-300px, 500%);
         // top: 50%;
         // opacity: 1;
-    }
+    // }
 }
 
 .centralizar {
+    transform-origin: bottom left;
+    transform: rotate(180deg);
     // transform-origin: -300px 150px;
     // transform: rotateX(20deg) translate(-300px, 500%);
     // animation: center 0.8s infinite;

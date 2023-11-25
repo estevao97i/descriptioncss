@@ -25,13 +25,14 @@ body {
   width: 100px;
   height: 100px;
   background: linear-gradient(red, blue);
-  opacity: 0.6;
-  transform-origin: center center;
-  transition: 0.8s ease;
-  transition: all 1s ease;
+  opacity: 0.9;
+  transform: rotate(0deg);
+  transition: all 0.8s ease;
 }
-.box:hover {
-  transform: rotate(20deg) translate(30px, -80px) scale(1.15) skew(0deg);
+
+.centralizar {
+  transform-origin: bottom left;
+  transform: rotate(180deg);
 }
 
 @Keyframes center {}
