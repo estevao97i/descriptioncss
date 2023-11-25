@@ -1,3 +1,5 @@
+$great-curve-bezier: cubic-bezier(0.03, 0.41, 0, 1.24);
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +33,7 @@ body {
     background-color: #ccc;
     border-radius: 16px;
 
-    animation: move-parent-in 2s cubic-bezier(0.03, 0.41, 0, 1.24) 5 alternate;
+    animation: move-parent-in 2s $great-curve-bezier 5 alternate;
     // animation-name: move-parent-in;
     // animation-duration: 2s;
     // animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
