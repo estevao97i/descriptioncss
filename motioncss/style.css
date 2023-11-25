@@ -25,7 +25,6 @@ body {
   height: 100px;
   background-color: #ccc;
   border-radius: 16px;
-  transform: rotateX(20deg) rotateY(20deg);
   transform-style: preserve-3d;
   transition: all 0.8s ease;
 }
@@ -41,11 +40,11 @@ body {
 }
 
 .centralizar {
-  transform: rotateX(170deg);
+  transform: rotateX(120deg);
 }
 
 .roll-parent {
-  transform: rotateY(20deg);
+  transform: rotateY(-180deg);
 }
 
 @Keyframes center {}
