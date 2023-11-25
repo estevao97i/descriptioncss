@@ -11,43 +11,59 @@ body {
 }
 
 .container {
+  position: relative;
   margin: 0 auto;
   width: 80%;
   height: 100dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .parent {
+  position: absolute;
+  right: 0;
   perspective: 200px;
   width: 100px;
-  height: 100px;
+  height: 30px;
   background-color: #ccc;
   border-radius: 16px;
-  transform-style: preserve-3d;
-  transition: all 0.8s ease;
+  animation: move-parent-in 2s cubic-bezier(0.03, 0.41, 0, 1.24) 5 alternate;
 }
 
+@keyframes move-parent-in {
+  0% {
+    right: 0;
+    top: 0%;
+    height: 30px;
+  }
+  5% {
+    height: 5px;
+    right: 10%;
+    top: 2%;
+    transform: skew(-50deg);
+    width: 300px;
+  }
+  10% {
+    transform: skew(0deg);
+    width: 300px;
+    height: 300px;
+    top: 2%;
+    right: 30%;
+  }
+  100% {
+    transform: skew(0deg);
+    width: 300px;
+    height: 300px;
+    top: 2%;
+    right: 30%;
+  }
+}
 .box {
   border-radius: 16px;
   width: 100px;
-  height: 100px;
+  height: 50px;
   background: linear-gradient(red, blue);
   opacity: 0.9;
-  transform: rotateX(50deg);
-  transition: all 0.8s ease;
 }
 
-.centralizar {
-  transform: rotateX(120deg);
-}
-
-.roll-parent {
-  transform: rotateY(-180deg);
-}
-
-@Keyframes center {}
 @keyframes rotation {
   from {
     transform: rotate(0deg);
