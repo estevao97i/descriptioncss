@@ -9,6 +9,7 @@ body {
     width: 100%;
 
     background-color: #1a1a1a;
+    overflow-x: hidden;
     /* background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p1/6897038-cosmos-flor-fundo-em-aquarela-vetor.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -75,4 +76,30 @@ h1 {
 
 .bakground {
     /* background-color: rgba(139, 0, 0, .5); */
+}
+
+.footer-scroll {
+    margin-top: 20%;
+}
+
+.horizontal-scroll {
+    height: 120vh;
+    display: flex;
+    min-width: max-content;
+}
+
+.section {
+    min-width: 100vw;
+    height: 100vh;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.section:nth-child(odd) {
+    background-color: lightcoral;
+}
+.section:nth-child(even) {
+    background-color: lightblue;
 }
