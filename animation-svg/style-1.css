@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #1d1d1d;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    height: inherit;
+}
+
+section svg {
+    width: 70%;
+    height: 70%;
+}
+
+.logo {
+    margin-top: 1rem;
+    animation: logoAnimation 3s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate, logoAnimation1 2s ease infinite alternate;
+}
+
+@media (max-width: 768px) {
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+@keyframes logoAnimation {
+
+    0%,
+    30% {
+        d: path('M20.2414 15L31 5L12.3793 1L1 5');
+        stroke-width: .1;
+    }
+    100% {
+        d: path('M20.3039 30L31 9L40.4000 1L9 15');
+    }
+}
+
+@keyframes logoAnimation1 {
+    0% { transform: scale(1, 1); }  /* Start at original size */
+    25% { transform: scale(1.1, 0.9); } /* Slightly wider and squished top */
+    50% { transform: scale(0.9, 1.1); } /* Slightly narrower and stretched top */
+    75% { transform: scale(1.1, 0.9); } /* Slightly wider and squished top again */
+    100% { transform: scale(1, 1); }  /* End at original size */
+}
