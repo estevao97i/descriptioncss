@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    /* background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p1/6897038-cosmos-flor-fundo-em-aquarela-vetor.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+h1 {
+    padding: 2rem 4rem;
+    font-size: 44px;
+}
+
+.back {
+    background-image: url('https://ied.edu.br/news/19019/image-thumb__19019__scaleByWidth1000/Design%20Gr%C3%A1fico%20e%20Digital%20do%20IED%20SP_1.png');
+    /* Caminho da imagem */
+    background-size: cover;
+    /* Ajusta a imagem para cobrir todo o elemento */
+    background-repeat: no-repeat;
+    /* Evita repetição da imagem */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-color: rgba(240, 248, 255, .2);
+    will-change: transform;
+    opacity: 0.7;
+}
+
+.container {
+    height: inherit;
+    width: 100%;
+    /* background-color: #353535; */
+    /* border: 1px solid red; */
+}
+
+.squaresThree {
+    display: flex;
+}
+
+.square {
+    padding-top: 2rem;
+    height: 400px;
+    width: 500px;
+
+    border-radius: 12px;
+
+    background-image: url('https://s2-g1.glbimg.com/4yf3nJtDX1tVXr0xsPSQP-mODvw=/0x0:503x503/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/A/7/37119dTQmAPb3xq9E98w/captura-de-tela-2024-05-07-173200.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 100;
+    background-color: beige;
+    /* margin-top: 8%; */
+}
+
+.square2 {
+    margin-top: 19%;
+    height: 400px;
+    width: 400px;
+    z-index: -3;
+
+    background-image: url('https://media.tenor.com/KX33drEDY_cAAAAM/capybara.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* opacity: 0; */
+
+    background-color: rgb(155, 155, 155);
+
+}
+
+.bakground {
+    /* background-color: rgba(139, 0, 0, .5); */
+}
+
+.footer-scroll {
+    /* margin-top: 20%; */
+}
+
+.horizontal-scroll {
+    z-index: -20;
+    height: 120vh;
+    display: flex;
+    min-width: max-content;
+}
+
+.section {
+    min-width: 100vw;
+    height: 100vh;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.section:nth-child(odd) {
+    /* background-color: lightcoral; */
+}
+
+.section:nth-child(even) {
+    /* background-color: lightblue; */
+}
+
+.section-roll {
+    cursor: pointer;
+    /* pointer-events: none; */
+    padding: 2rem;
+    background-color: blanchedalmond;
+    height: 80%;
+    width: 80%;
+}

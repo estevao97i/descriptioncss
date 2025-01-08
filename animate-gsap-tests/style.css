@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    /* background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p1/6897038-cosmos-flor-fundo-em-aquarela-vetor.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+h1 {
+    padding: 2rem 4rem;
+    font-size: 44px;
+}
+
+.back {
+    background-image: url('https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic2683012_0.jpg?w=1600'); /* Caminho da imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    /* background-color: rgba(240, 248, 255, .2); */
+    background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); */
+
+    border-radius: 12px;
+    min-width: 400px;
+    min-height: 200px;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    /* transform: scale(1.5); */
+}
+
+.back:hover {
+    cursor: pointer;
+}
+
+.container {
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 4rem; */
+    flex-direction: column;
+    /* background-color: #353535; */
+    /* border: 1px solid red; */
+}
+
+.desc {
+    min-width: 400px;
+    min-height: 200px;
+
+    background-color: white;
+    padding: 2rem 1rem;
+    z-index: -1;
+    transform: translateY(-16px);
+
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.expanding {
+    height: 100dvh;
+    width: 100%;
+}
