@@ -6,11 +6,16 @@ const capivara1 = document.querySelector('.cp1')
 const capivara2 = document.querySelector('.cp2')
 const capivara3 = document.querySelector('.cp3')
 const back = document.querySelector('.back')
+const titleData = document.querySelector('h1[data-title]')
+
+console.log(titleData)
 console.log(section)
 console.log(back)
 // console.log(square2)
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+const tl = gsap.timeline({ ease: 'power1.inOut' });
 
 // Função personalizada para desacelerar o scroll
 window.addEventListener("wheel", (e) => {
@@ -120,14 +125,14 @@ gsap.to(horizontalWrapper, {
 section.forEach(s => {
     s.addEventListener('mouseover', () => {
         gsap.to(s, {
-            scale: 1.02,
+            // scale: 1.02,
             ease: 'power1.inOut',
         })
     })
 
     s.addEventListener('mouseleave', () => {
         gsap.to(s, {
-            scale: 1,
+            // scale: 1,
             ease: 'power1.inOut',
         })
     })
@@ -148,11 +153,73 @@ gsap.fromTo(back, {
     // duration: 1,
     scrollTrigger: {
         trigger: back,
-        start: 'bottom 90%',
-        end: 'top 0%',
+        start: 'center 20%',
+        end: 'center 0%',
         scrub: 2,
         // pin: true,
+        // markers: true,
+    }
+})
+
+tl.to(titleData, {
+    y: 700,
+    x: 12,
+    scale: 1.1,
+    ease: 'power1.inOut',
+    // filter: 'drop-shadow(3px 16px 10px black)',
+    scrollTrigger: {
+        trigger: back,
+        // scrub: 2,
+        start: '30% 40%',
+        end: 'center 0%',
+        scrub: true,
         markers: true,
+    }
+})
+
+// .to(titleData, {
+//     y: 500,
+//     scale: 1.3,
+//     ease: 'power1.inOut',
+//     filter: 'drop-shadow(20px 20px 6px blue)',
+//     scrollTrigger: {
+//         trigger: back,
+//         // scrub: 2,
+//         start: '30% 40%',
+//         end: 'center 0%',
+//         scrub: true,
+//         markers: true,
+//     } 
+// })
+
+// gsap.to(titleData, {
+//     y: 500,
+//     scale: 1.03,
+//     ease: 'power1.inOut',
+//     filter: 'drop-shadow(3px 16px 10px black)',
+//     scrollTrigger: {
+//         trigger: back,
+//         // scrub: 2,
+//         start: '30% 40%',
+//         end: 'center 0%',
+//         scrub: true,
+//         markers: true,
+//     }
+// })
+
+gsap.fromTo(horizontalWrapper, {
+    y: 0,
+    ease: 'power1.inOut',
+},
+{
+    y: 30,
+    ease: 'power1.inOut',
+    scrollTrigger: {
+        trigger: back,
+        scrub: 1,
+        start: 'bottom 90%',
+        end: 'top 0%',
+        pin: true
     }
 })
 
