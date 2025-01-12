@@ -93,6 +93,7 @@ h1 {
 
 .footer-scroll {
     /* margin-top: 20%; */
+    z-index: 200;
 }
 
 .horizontal-scroll {

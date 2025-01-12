@@ -8,6 +8,8 @@ const capivara3 = document.querySelector('.cp3')
 const back = document.querySelector('.back')
 const titleData = document.querySelector('h1[data-title]')
 
+const heightPag = window.pageYOffset;
+
 console.log(titleData)
 console.log(section)
 console.log(back)
@@ -254,3 +256,15 @@ gsap.fromTo(horizontalWrapper, {
 //         markers: true,
 //     }
 // })
+
+scrollzinho = function() {
+    newPos = window.pageYOffset;
+    const diff = newPos - heightPag;
+    const speed = diff * .35;
+
+    titleData.style.transform = 'skewY(' + speed + ')deg';
+    heightPag = newPos;
+    requestAnimationFrame(scrollzinho)
+}
+
+scrollzinho();
