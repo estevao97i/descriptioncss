@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.bottom-content {
+    /* width: 10%; */
+    display: flex;
+    /* padding: 2rem; */
+}
+
+
+.calendar {
+    width: 20%;
+    height: 100px;
+    padding: 1rem;
+}
+
+.calendar-input {
+    height: 12rem;
+    width: 100%;
+    background-color: rgb(255, 233, 233);
+    /* background-color: aquamarine; */
+}
+
+section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    /* height: 100vh; */
+    gap: 1rem;
+}
+
+.day {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: .5rem 0rem;
+    text-align: center;
+}
+
+.header {
+    background-color: rgb(228 240 245);
+    padding: .5rem 1.7rem;
+}
+
+.tab {
+    background-color: rgb(245, 244, 228);
+    width: 100%;
+    min-height: 10vh;
+    overflow: auto;
+}
+
+.marcado {
+    /* flex-grow: 1; */
+    /* width: 120px; */
+    /* height: 100px; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 2px solid rgb(204, 245, 179);
+    /* padding: .3rem; */
+    border-radius: 12px;
+
+    /* overflow: hidden; */
+    padding-bottom: 1rem;
+}
+
+.header-marked {
+    padding: .5rem 0;
+    /* height: 100%; */
+    width: 100%;
+    background-color: rgb(204, 245, 179);
+    /* padding: .1rem; */
+    /* padding: 0rem 2rem; */
+}
