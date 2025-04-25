@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Som ao Clicar</title>
+  <style>
+    body {
+        height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section {
+        display: flex;
+    }
+
+    button {
+      padding: 20px;
+      font-size: 1.5em;
+      cursor: pointer;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <h1>Clique nos botões para ouvir os sons!</h1>
+    </header>
+
+    <section>
+        <!-- Botões que irão gerar os sons -->
+        <button id="button1">Som 1</button>
+        <button id="button2">Som 2</button>
+        <button id="button3">Som 3</button>
+        <button id="button4">Som 4</button>
+        <button id="base">Base</button>
+    </section>
+
+  <script>
+    // Criar objetos de áudio
+    const som1 = new Audio('./audios/audio1.ogg');
+    const som2 = new Audio('./audios/audio2.ogg');
+    const som3 = new Audio('./audios/audio3.ogg');
+    const som4 = new Audio('./audios/audio4.ogg');
+    const base = new Audio('./audios/base.ogg');
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        // Adicionar eventos de clique aos botões
+        document.getElementById('button1').addEventListener('mouseenter', function() {
+          som1.play();  // Toca o som1 quando o botão 1 for clicado
+        });
+      
+        document.getElementById('button2').addEventListener('mouseenter', function() {
+          som2.play();  // Toca o som2 quando o botão 2 for clicado
+        });
+      
+        document.getElementById('button3').addEventListener('mouseenter', function() {
+          som3.play();  // Toca o som3 quando o botão 3 for clicado
+        });
+      
+        document.getElementById('button4').addEventListener('mouseenter', function() {
+          som4.play();  // Toca o som3 quando o botão 3 for clicado
+        });
+
+        document.getElementById('base').addEventListener('click', function() {
+          base.play();  // Toca o som3 quando o botão 3 for clicado
+        });
+
+
+    console.log("DOM completamente carregado e analisado");
+  });
+
+  </script>
+</body>
+</html>
